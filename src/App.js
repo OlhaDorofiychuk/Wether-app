@@ -1,12 +1,14 @@
 
 import './App.css';
+import { Search } from './components/search';
 
 function App() {
   return (
-    <div className="App">
+    <div className="container">
       <header className="App-header">
         My Weather
       </header>
+      <Search />
     </div>
   );
 }
