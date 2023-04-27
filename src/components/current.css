@@ -5,3 +5,29 @@
     height: 400px;
     margin: 20px auto 0 auto;
 }
+
+.city {
+    padding-top: 10px;
+    font-weight: 700;
+    font-size: xx-large;
+    border-bottom: 1px solid black;
+}
+.condition {
+    font-weight: 500;
+    font-style: oblique;
+}
+.detailed {
+    display: grid;
+    grid-template-rows: auto;
+    gap: 5px;
+}
+.temprature{
+    font-size: xx-large;
+    font-weight: 900;
+}
+.label{
+    font-style: italic;
+}
+.value{
+    font-weight: 500;
+}
