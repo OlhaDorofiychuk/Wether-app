@@ -12,7 +12,7 @@ export const CurrentWeather = ({ data }) => {
           src={`icons/${data.weather[0].icon}.png`}
         />
       </div>
-      {/* <div> */}
+      <div className="main"> 
         <p className="temprature">{Math.round(data.main.temp)}°C</p>
         <div className="detailed">
           <span>
@@ -35,7 +35,7 @@ export const CurrentWeather = ({ data }) => {
             <span className="value">12</span>
           </div>
         </div>
-      {/* </div> */}
+      </div>
     </div>
   );
 };
