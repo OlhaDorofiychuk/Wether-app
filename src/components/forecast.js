@@ -5,7 +5,6 @@ const weekDays=['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturda
 export const Forecast =({data})=>{
     const dayOfTheWeek = new Date().getDay()
     const forecastWeek= weekDays.slice(dayOfTheWeek, weekDays.length).concat(weekDays.slice(0,dayOfTheWeek))
-    console.log(forecastWeek)
     return (
     <>
     <label className="title">Daily</label>
@@ -24,8 +23,28 @@ export const Forecast =({data})=>{
             <AccordionItemPanel>
                 <div className="daily-details-container">
                     <div className="daily-details-container-item">
-                        <label>Pressure</label>
-                        <label>{item.main.pressure}</label>
+                        <label>Pressure:</label>
+                        <label>{item.main.pressure}hPa</label>
+                    </div>
+                    <div className="daily-details-container-item">
+                        <label>Humidity:</label>
+                        <label>{item.main.humidity}%</label>
+                    </div>
+                    <div className="daily-details-container-item">
+                        <label>Clouds:</label>
+                        <label>{item.clouds.all}%</label>
+                    </div>
+                    <div className="daily-details-container-item">
+                        <label>Wind speed:</label>
+                        <label>{item.wind.speed}m/s</label>
+                    </div>
+                    <div className="daily-details-container-item">
+                        <label>Sea Level:</label>
+                        <label>{item.main.sea_level}m</label>
+                    </div>
+                    <div className="daily-details-container-item">
+                        <label>Feels like:</label>
+                        <label>{Math.round(item.main.feels_like)}°C</label>
                     </div>
                 </div>
             </AccordionItemPanel>

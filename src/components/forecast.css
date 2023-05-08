@@ -1,6 +1,9 @@
 .title{
     font-size: 22px;
     font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
 }
 .daily-item {
     display: flex;
@@ -9,9 +12,10 @@
     font-size: 14px;
     background-color: rgb(247, 242, 236);
     height: 45px;
-    margin: 5px;
+    margin: 5px 15px;
     padding: 5px 20px;
     border-radius: 15px;
+    flex: 1 1;
 
 }
 .icon-small {
@@ -20,7 +24,7 @@
 .day{
     font-weight: 600;
     margin-left: 15px;
-    flex: 1 1;
+    
 }
 
 .description{
@@ -31,4 +35,29 @@
 
 .min-max{
     color: rgb(69, 75, 82);
+}
+.daily-details-container{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 15px;
+    grid-row-gap: 0;
+    grid-column-gap: 15px;
+    flex:1 1;
+    padding: 5px 15px;
+    row-gap: 0;
+}
+.daily-details-container-item{
+    display: flex;
+    height: 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+.daily-details-container-item label:first-child{
+    color: rgb(47, 41, 41);
+
+}
+.daily-details-container-item label:last-child{
+    color: rgb(24, 18, 18);
+    font-weight: 600;
+
 }
