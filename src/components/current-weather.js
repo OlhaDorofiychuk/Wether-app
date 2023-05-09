@@ -6,9 +6,8 @@ export const CurrentWeather = ({ data }) => {
 
   const sunriseTime = new Date(sunriseUnix * 1000).toLocaleTime;
   const sunsetTime = new Date(sunsetUnix * 1000).toLocaleTime;
-  console.log('sunrise',sunriseTime)
 
-  return (
+  return ( 
     <div className="weather">
       <div className="top">
         <p className="city"> {data.city} </p>

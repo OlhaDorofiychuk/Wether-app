@@ -22,7 +22,7 @@ export const Search=({onSearch})=>{
                 })
             }
         })
-        // .catch(err => console.error(err));
+        
     }
 
     const handleOnChange =(searchData)=>{
