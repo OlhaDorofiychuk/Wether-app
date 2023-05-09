@@ -1,8 +1,10 @@
 .title{
+    display: flex;
     font-size: 22px;
     font-weight: 700;
     margin-top: 20px;
     margin-bottom: 20px;
+    justify-content: center;
 
 }
 .daily-item {

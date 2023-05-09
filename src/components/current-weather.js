@@ -1,7 +1,13 @@
 import "./current.css";
 
 export const CurrentWeather = ({ data }) => {
-   
+  const sunriseUnix = data.sys.sunrise;
+  const sunsetUnix = data.sys.sunset;
+
+  const sunriseTime = new Date(sunriseUnix * 1000).toLocaleTime;
+  const sunsetTime = new Date(sunsetUnix * 1000).toLocaleTime;
+  console.log('sunrise',sunriseTime)
+
   return (
     <div className="weather">
       <div className="top">
@@ -13,11 +19,13 @@ export const CurrentWeather = ({ data }) => {
           src={`icons/${data.weather[0].icon}.png`}
         />
       </div>
-      <div className="main"> 
+      <div className="main">
         <p className="temprature">{Math.round(data.main.temp)}°C</p>
         <div className="detailed">
           <div className="parameter-row">
-            <span><u>Details</u></span>
+            <span>
+              <u>Details</u>
+            </span>
           </div>
           <div className="parameter-row">
             <span className="label">Feels like: </span>
@@ -37,13 +45,12 @@ export const CurrentWeather = ({ data }) => {
           </div>
           <div className="parameter-row">
             <span className="label">Sunrise: </span>
-            <span className="value">{new Date(data.sys.sunrise*1000).toLocaleTime}AM</span>
+            <span className="value">{sunriseTime}AM</span>
           </div>
           <div className="parameter-row">
             <span className="label">Sunset: </span>
-            <span className="value">{data.sys.sunset*1000}PM</span>
+            <span className="value">{sunsetTime}PM</span>
           </div>
-          
         </div>
       </div>
     </div>

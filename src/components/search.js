@@ -7,7 +7,7 @@ export const Search=({onSearch})=>{
 
     const [search, setSearch]=useState(null)
     const loadOptions=(inputValue) =>{
-        return fetch(`${cityOptionsURL}/cities?namePrefix=${inputValue}`,
+        return fetch(`${cityOptionsURL}/cities?minPopulation&namePrefix=${inputValue}`,
         cityApiOptions 
         )
         .then(response => response.json())
@@ -22,7 +22,7 @@ export const Search=({onSearch})=>{
                 })
             }
         })
-        .catch(err => console.error(err));
+        // .catch(err => console.error(err));
     }
 
     const handleOnChange =(searchData)=>{
@@ -32,7 +32,7 @@ export const Search=({onSearch})=>{
     return(
         <AsyncPaginate
         placeholder='Search for city'
-        debounceTimeout={500}
+        debounceTimeout={600}
         value={search}
         onChange={handleOnChange}
         loadOptions={loadOptions}
