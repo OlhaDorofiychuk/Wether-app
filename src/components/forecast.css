@@ -36,7 +36,9 @@
 }
 
 .min-max{
-    color: rgb(69, 75, 82);
+    color: rgb(84, 81, 2);
+    font-weight: 600;
+    size: 22px;
 }
 .daily-details-container{
     display: grid;
